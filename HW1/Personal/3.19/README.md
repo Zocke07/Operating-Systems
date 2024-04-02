@@ -30,3 +30,23 @@ gettimeofday(&current,NULL);
 ```
 
 For IPC between the child and parent processes, the contents of the shared memory pointer can be assigned the `struct timeval` representing the starting time. When pipes are used, a pointer to a `struct timeval` can be written to—and read from— the pipe.
+
+---
+
+> Linux Ubuntu 22.04.4 with gcc 11.4.0  
+
+There will be 2 codes, which are for the shared memory version `timeshm.c` and for the pipe version `timepipe.c`.  
+
+In the source code folder, run the following command to compile the `timeshm.c` program  
+<pre><code>gcc timeshm.c -o timeshm</code></pre>  
+Execute the program by inputting the following command  
+<pre><code>./timeshm [command]</code></pre>  
+In this case, we will use ***ls*** as the command  
+![image](https://github.com/Zocke07/Operating-Systems/assets/91361456/62fff170-8540-45d1-b5c5-e814070e7767)  
+
+In the source code folder, run the following command to compile the `timepipe.c` program  
+<pre><code>gcc timepipe.c -o timepipe</code></pre>  
+Execute the program by inputting the following command  
+<pre><code>./timepipe [command]</code></pre>  
+In this case, we will use ***ls*** as the command  
+![image](https://github.com/Zocke07/Operating-Systems/assets/91361456/e12c6237-3edf-4070-863b-c03ef4e1af7c)
