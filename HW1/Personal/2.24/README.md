@@ -12,7 +12,7 @@ Since Windows systems do not provide such a tool, you will have to trace through
 
 ---
 
-> This program is run on Linux Ubuntu 22.04.4.  
+> Linux Ubuntu 22.04.4 with gcc 11.4.0  
 
 In the source code folder, run the following command to compile the c program  
 <pre><code>gcc fileCopy.c -o fileCopy</code></pre>  
