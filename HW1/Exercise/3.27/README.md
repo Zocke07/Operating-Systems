@@ -6,7 +6,8 @@ Design a file-copying program named `filecopy.c` using ordinary pipes. This prog
 
 the file `input.txt` will be written to the pipe. The child process will read the contents of this file and write it to the destination file `copy.txt`. You may write this program using either UNIX or Windows pipes.
 
----
+
+# Documentation and Snapshot 3.27
 
 > Linux Ubuntu 22.04.4 with gcc 11.4.0
 

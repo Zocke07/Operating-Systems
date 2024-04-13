@@ -10,7 +10,8 @@ The conjecture states that when this algorithm is continually applied, all posit
 
 Write a C program using the `fork()` system call that generates this sequence in the child process. The starting number will be provided from the command line. For example, if 8 is passed as a parameter on the command line, the child process will output 8, 4, 2, 1. Because the parent and child processes have their own copies of the data, it will be necessary for the child to output the sequence. Have the parent invoke the `wait()` call to wait for the child process to complete before exiting the program. Perform necessary error checking to ensure that a positive integer is passed on the command line.
 
----
+
+# Documentation and Snapshot 3.21
 
 > Linux Ubuntu 22.04.4 with gcc 11.4.0
 
