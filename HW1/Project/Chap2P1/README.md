@@ -217,3 +217,20 @@ This assignment will involve designing two kernel modules:
 2. Design a kernel module that creates a proc file named `/proc/seconds` that reports the number of elapsed seconds since the kernel module was loaded. This will involve using the value of `jiffies` as well as the `HZ` rate. When a user enters the command
    <pre><code>cat /proc/seconds</code></pre>
    your kernel module will report the number of seconds that have elapsed since the kernel module was first loaded. Be sure to remove `/proc/seconds` when the module is removed.
+
+
+# Documentation and Snapshot Chap2P1
+
+> Linux Ubuntu 22.04.4 with gcc 11.4.0 and kernel 6.5.0-26-generic
+
+In the source code folder, run `make` to execute the Makefile file which will compile the kernel modules `jiffies_module.ko` and `seconds_module.ko`.  
+
+Run `make install` to load both modules using the `sudo insmod <module>`.  
+
+Run `cat /proc/jiffies` to see the jiffies value and run `cat /proc/seconds` to see the seconds value.  
+
+Run `make uninstall` to unload both modules using the `sudo rmmod <module>`.  
+
+Run `make clean` to clean the project.  
+
+![image](https://github.com/Zocke07/Operating-Systems/assets/91361456/b4110edd-0f33-472d-87d6-137eb9f0b7c1)
