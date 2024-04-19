@@ -69,3 +69,26 @@ For a valid `pid` in the system, `pid_task` will return its `task_struct`. You c
 If `pid_task()` is not passed a valid `pid`, it returns `NULL`. Be sure to perform appropriate error checking to check for this condition. If this situation occurs, the kernel module function associated with reading from `/proc/pid` should return 0.  
 
 In the source code download, we give the C program `pid.c`, which provides some of the basic building blocks for beginning this project.
+
+
+# Documentation and Snapshot Chap3P2
+
+> Linux Ubuntu 22.04.4 with gcc 11.4.0 and kernel 6.5.0-26-generic.
+
+In the source code folder, run `make` to execute the Makefile file, which will compile the kernel module `pid.ko`.  
+
+Run `make install` to load both modules using the `sudo insmod <module>`.  
+
+Run `echo [character] > /proc/pid`.  
+
+The `echo` command writes the character to the `/proc/pid` file. The kernel module will read the value and store its integer equivalent as it represents a process identifier. In this case example, we will input **1**.  
+
+Run `cat /proc/pid`.  
+
+The `cat` command reads from `/proc/pid`.   
+
+Run `make uninstall` to unload module using the `sudo rmmod <module>`.  
+
+Run `make clean` to clean the project.  
+
+![image](https://github.com/Zocke07/Operating-Systems/assets/91361456/e0c97173-8057-4967-971e-69afe2763228)
