@@ -40,3 +40,27 @@ The preceding program segment produces a race condition. Do the following:
 1. Identify the data involved in the race condition.
 2. Identify the location (or locations) in the code where the race con dition occurs.
 3. Using a semaphore or mutex lock, fix the race condition. It is permissible to modify the `decrease_count()` function so that the calling process is blocked until sufficient resources are available.  
+
+
+# Documentation and Snapshot 6.33  
+
+Using the following code as a base
+```
+#define MAX_RESOURCES 5
+int available_resources = MAX RESOURCES;
+int decrease_count(int count) {
+  if (available_resources < count)
+    return -1;
+  else {
+    available_resources -= count;
+    return 0;
+  }
+}
+ int increase_count(int count) {
+   available_resources += count;
+   return 0;
+ }
+```
+1. The data involved in the race condition is the `available_resources`
+2. The locations in the code where the race condition occurs are at `available_resources -= count` and `available_resources += count`
+3. The modified code using the mutex lock is provided in the [source code folder](https://github.com/Zocke07/Operating-Systems/tree/main/HW2/Exercise/6.33/Source).
