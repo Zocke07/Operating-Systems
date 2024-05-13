@@ -9,3 +9,18 @@ Because global data are shared across all threads, perhaps the easiest way to se
 This programming project will require passing parameters to each of the sorting threads. In particular, it will be necessary to identify the starting index from which each thread is to begin sorting.  
 
 The parent thread will output the sorted array once all sorting threads have exited.
+
+
+# Documentation and Snapshot Chap4P2  
+
+> Linux Ubuntu 22.04.4 with gcc 11.4.0 and kernel 6.5.0-26-generic.
+
+In the source code folder, run  
+<pre><code>gcc sort.c -o sort</code></pre>  
+to compile the `sort.c` file and create an executable file called `sort`.  
+
+Run the sort file with the command  
+<pre><code>./sort</code></pre>  
+
+Snapshot:  
+![image](https://github.com/Zocke07/Operating-Systems/assets/91361456/69314d97-3035-42b3-aeb0-70e37c95f39c)
