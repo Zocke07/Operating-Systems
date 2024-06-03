@@ -1,0 +1,3 @@
+# Problem 7.17  
+
+[Exercise 4.24](https://github.com/Zocke07/Operating-Systems/tree/main/HW2/Exercise/4.24) asked you to design a multithreaded program that esti mated π using the Monte Carlo technique. In that exercise, you were asked to create a single thread that generated random points, storing the result in a global variable. Once that thread exited, the parent thread performed the calculation that estimated the value of π. Modify that program so that you create several threads,each of which generates random points and determines if the points fall with in the circle. Each thread will have to update the global count of all points that fall within the circle. Protect against race conditions on updates to the shared global variable by using mutex locks.
